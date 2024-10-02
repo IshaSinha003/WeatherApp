@@ -1,0 +1,58 @@
+html{
+    font-family: sans-serif;
+}
+header{
+    height: 100px;
+    background-color: #3d5a80;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+input[type = text]{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gray;
+    background-color: #3d5a80;
+    color: white;
+    width: 30rem;
+    font-size: 1rem;
+}
+button{
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border-radius: 12px;
+}
+main{
+    height: calc(100vh - 100px);
+    background-color: #98c1d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: larger;
+}
+.weather-info{
+    padding-right: 2rem;
+}
+.temperature{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.location-data{
+    margin-top: 10px;
+}
+.location{
+    font-size: 2rem;
+}
+.time, .date{
+    font-size: 1rem;
+}
+.humid{
+    margin-top: 10px;
+}
+
+.weather-container{
+    display: flex;
+    gap: 1rem;
+}
