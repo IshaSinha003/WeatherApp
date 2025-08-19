@@ -21,6 +21,7 @@ const dateEle = document.querySelector(".date");
 const conditionEle = document.querySelector(".condition");
 const imageEle = document.querySelector(".emoji");
 const humidEle = document.querySelector(".humid");
+const feelsLike = document.querySelector(".feelslike");
 
 function updateDOM(data){
     console.log("update data",data);
@@ -31,6 +32,7 @@ function updateDOM(data){
     const weatherCon = data.current.condition.text;
     const emojiUpdate = data.current.condition.icon;
     const humidUpdate = data.current.humidity;
+    const feelsLikeUpdate = data.current.feelslike_c;
 
     tempEle.textContent = temp + "°C";
     locationEle.textContent = city;
@@ -39,11 +41,12 @@ function updateDOM(data){
     conditionEle.textContent = weatherCon;
     imageEle.src = emojiUpdate;
     humidEle.textContent = "Humidity : " +  humidUpdate ;
+    feelsLike.textContent= "Feels like " +  feelsLikeUpdate + "°C";
 }
 
 async function fetchweather(location){
     
-    const url = `https://api.weatherapi.com/v1/current.json?key=6134d93ec3e149f6b6a65714242909&q=${location}&aqi=yes`
+    const url = `http://api.weatherapi.com/v1/current.json?key=45823285aabe4e66b7d41715251908&q=${location}&aqi=yes`
     const response = await fetch(url);
     if(response.status == 400){
         alert("Location invalid");
